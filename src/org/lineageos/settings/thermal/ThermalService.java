@@ -81,10 +81,6 @@ public class ThermalService extends Service {
         this.registerReceiver(mIntentReceiver, filter);
     }
 
-    private void unregisterReceiver() {
-        this.unregisterReceiver(mIntentReceiver);
-    }
-
     private final TaskStackListener mTaskListener = new TaskStackListener() {
         @Override
         public void onTaskStackChanged() {
