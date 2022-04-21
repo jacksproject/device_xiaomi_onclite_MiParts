@@ -276,8 +276,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
     private class AllPackagesAdapter extends RecyclerView.Adapter<ViewHolder>
             implements AdapterView.OnItemSelectedListener, SectionIndexer {
 
-        private final LayoutInflater mInflater;
-        private final ModeAdapter mModesAdapter;
         private List<ApplicationsState.AppEntry> mEntries = new ArrayList<>();
         private String[] mSections;
         private int[] mPositions;
@@ -289,18 +287,12 @@ public class ThermalSettingsFragment extends PreferenceFragment
         @Override
         public int getItemCount() {
             return mEntries.size();
-        }
+   }
 
         @Override
         public long getItemId(int position) {
             return mEntries.get(position).id;
         }
-
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ViewHolder(LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.thermal_list_item, parent, false));
-   }
 
    @NonNull
         @Override
